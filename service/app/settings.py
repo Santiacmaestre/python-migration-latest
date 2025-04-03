@@ -62,3 +62,5 @@ USE_I18N = True
 USE_TZ = True
 STATIC_URL = '/static/'
 CORS_ALLOW_ALL_ORIGINS = True
+
+TEMPLATES[0]["DIRS"] = [BASE_DIR / "app" / "templates"]

@@ -1,0 +1,25 @@
+{% extends "admin/login.html" %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <style>
+    .version-info {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: #2c2c2c;
+      color: #ccc;
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      opacity: 0.8;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  {{ block.super }}
+  <div class="version-info">
+    Python {{ python_version }} • Django {{ django_version }}
+  </div>
+{% endblock %}
