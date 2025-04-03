@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  website:
+    build: ./website
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./website:/app
+      - website_node_modules:/app/node_modules
+
+  service:
+    build: ./service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./service:/app
+    depends_on:
+      - website
+
+volumes:
+  website_node_modules:
