@@ -4,6 +4,7 @@ from django.utils.html import format_html
 from django.http import HttpResponse
 import django
 import sys
+import django
 
 class CustomAdminSite(admin.AdminSite):
     site_header = "ELITEA Admin"
@@ -31,6 +32,7 @@ class CustomAdminSite(admin.AdminSite):
     
     def login(self, request, extra_context=None):
         import sys
+import django
         import django
 
         extra_context = extra_context or {}
